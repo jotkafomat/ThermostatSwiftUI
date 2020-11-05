@@ -1,6 +1,6 @@
 //
 //  ThermostatApp.swift
-//  Thermostat
+//  ThermostatApp
 //
 //  Created by Krzysztof Jankowski on 05/11/2020.
 //

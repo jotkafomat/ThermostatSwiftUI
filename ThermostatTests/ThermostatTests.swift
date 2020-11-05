@@ -5,29 +5,47 @@
 //  Created by Krzysztof Jankowski on 05/11/2020.
 //
 
+import Foundation
 import XCTest
-@testable import Thermostat
+@testable import ThermostatApp
 
 class ThermostatTests: XCTestCase {
+    
+    var thermostat: Thermostat!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        thermostat = Thermostat()
     }
-
+    
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        thermostat = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testIntialValueEqual20() {
+        let result = thermostat.temperature
+        
+        XCTAssertEqual(result, Thermostat.Constants.intialTemprature)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testLowerTemperatureLowersTemperatureByOne(){
+        
+        let initalTemp = thermostat.temperature
+        thermostat.lowerTemperature()
+        
+        let resultTemp = thermostat.temperature
+        let differnce = initalTemp - resultTemp
+        XCTAssertEqual(differnce, Thermostat.Constants.step)
+    }
+    
+    func testMinimumTemeratureIsEqual10() {
+        for _ in 0...105 {
+            thermostat.lowerTemperature()
         }
-    }
 
+        let result = thermostat.temperature
+        
+        XCTAssertEqual(result, Thermostat.Constants.minimumTemparture)
+    }
+    
+    
 }

@@ -13,6 +13,7 @@
 		E175389C2554A4BE00B57258 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E175389B2554A4BE00B57258 /* Preview Assets.xcassets */; };
 		E17538A72554A4BF00B57258 /* ThermostatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17538A62554A4BF00B57258 /* ThermostatTests.swift */; };
 		E17538B22554A4BF00B57258 /* ThermostatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17538B12554A4BF00B57258 /* ThermostatUITests.swift */; };
+		E17538C32554A69300B57258 /* Thermostat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17538C22554A69300B57258 /* Thermostat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,18 +34,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E17538912554A4BC00B57258 /* Thermostat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thermostat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E17538912554A4BC00B57258 /* ThermostatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThermostatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17538942554A4BC00B57258 /* ThermostatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermostatApp.swift; sourceTree = "<group>"; };
 		E17538962554A4BC00B57258 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E17538982554A4BE00B57258 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E175389B2554A4BE00B57258 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E175389D2554A4BE00B57258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E17538A22554A4BF00B57258 /* ThermostatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThermostatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E17538A22554A4BF00B57258 /* ThermostatAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThermostatAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17538A62554A4BF00B57258 /* ThermostatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermostatTests.swift; sourceTree = "<group>"; };
 		E17538A82554A4BF00B57258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E17538AD2554A4BF00B57258 /* ThermostatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThermostatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E17538AD2554A4BF00B57258 /* ThermostatAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThermostatAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17538B12554A4BF00B57258 /* ThermostatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermostatUITests.swift; sourceTree = "<group>"; };
 		E17538B32554A4BF00B57258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E17538C22554A69300B57258 /* Thermostat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thermostat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +87,9 @@
 		E17538922554A4BC00B57258 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E17538912554A4BC00B57258 /* Thermostat.app */,
-				E17538A22554A4BF00B57258 /* ThermostatTests.xctest */,
-				E17538AD2554A4BF00B57258 /* ThermostatUITests.xctest */,
+				E17538912554A4BC00B57258 /* ThermostatApp.app */,
+				E17538A22554A4BF00B57258 /* ThermostatAppTests.xctest */,
+				E17538AD2554A4BF00B57258 /* ThermostatAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +102,7 @@
 				E17538982554A4BE00B57258 /* Assets.xcassets */,
 				E175389D2554A4BE00B57258 /* Info.plist */,
 				E175389A2554A4BE00B57258 /* Preview Content */,
+				E17538C22554A69300B57258 /* Thermostat.swift */,
 			);
 			path = Thermostat;
 			sourceTree = "<group>";
@@ -133,9 +136,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E17538902554A4BC00B57258 /* Thermostat */ = {
+		E17538902554A4BC00B57258 /* ThermostatApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E17538B62554A4BF00B57258 /* Build configuration list for PBXNativeTarget "Thermostat" */;
+			buildConfigurationList = E17538B62554A4BF00B57258 /* Build configuration list for PBXNativeTarget "ThermostatApp" */;
 			buildPhases = (
 				E175388D2554A4BC00B57258 /* Sources */,
 				E175388E2554A4BC00B57258 /* Frameworks */,
@@ -145,14 +148,14 @@
 			);
 			dependencies = (
 			);
-			name = Thermostat;
+			name = ThermostatApp;
 			productName = Thermostat;
-			productReference = E17538912554A4BC00B57258 /* Thermostat.app */;
+			productReference = E17538912554A4BC00B57258 /* ThermostatApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E17538A12554A4BF00B57258 /* ThermostatTests */ = {
+		E17538A12554A4BF00B57258 /* ThermostatAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E17538B92554A4BF00B57258 /* Build configuration list for PBXNativeTarget "ThermostatTests" */;
+			buildConfigurationList = E17538B92554A4BF00B57258 /* Build configuration list for PBXNativeTarget "ThermostatAppTests" */;
 			buildPhases = (
 				E175389E2554A4BF00B57258 /* Sources */,
 				E175389F2554A4BF00B57258 /* Frameworks */,
@@ -163,14 +166,14 @@
 			dependencies = (
 				E17538A42554A4BF00B57258 /* PBXTargetDependency */,
 			);
-			name = ThermostatTests;
+			name = ThermostatAppTests;
 			productName = ThermostatTests;
-			productReference = E17538A22554A4BF00B57258 /* ThermostatTests.xctest */;
+			productReference = E17538A22554A4BF00B57258 /* ThermostatAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E17538AC2554A4BF00B57258 /* ThermostatUITests */ = {
+		E17538AC2554A4BF00B57258 /* ThermostatAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E17538BC2554A4BF00B57258 /* Build configuration list for PBXNativeTarget "ThermostatUITests" */;
+			buildConfigurationList = E17538BC2554A4BF00B57258 /* Build configuration list for PBXNativeTarget "ThermostatAppUITests" */;
 			buildPhases = (
 				E17538A92554A4BF00B57258 /* Sources */,
 				E17538AA2554A4BF00B57258 /* Frameworks */,
@@ -181,9 +184,9 @@
 			dependencies = (
 				E17538AF2554A4BF00B57258 /* PBXTargetDependency */,
 			);
-			name = ThermostatUITests;
+			name = ThermostatAppUITests;
 			productName = ThermostatUITests;
-			productReference = E17538AD2554A4BF00B57258 /* ThermostatUITests.xctest */;
+			productReference = E17538AD2554A4BF00B57258 /* ThermostatAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -208,7 +211,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E175388C2554A4BC00B57258 /* Build configuration list for PBXProject "Thermostat" */;
+			buildConfigurationList = E175388C2554A4BC00B57258 /* Build configuration list for PBXProject "ThermostatApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -221,9 +224,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E17538902554A4BC00B57258 /* Thermostat */,
-				E17538A12554A4BF00B57258 /* ThermostatTests */,
-				E17538AC2554A4BF00B57258 /* ThermostatUITests */,
+				E17538902554A4BC00B57258 /* ThermostatApp */,
+				E17538A12554A4BF00B57258 /* ThermostatAppTests */,
+				E17538AC2554A4BF00B57258 /* ThermostatAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E17538972554A4BC00B57258 /* ContentView.swift in Sources */,
+				E17538C32554A69300B57258 /* Thermostat.swift in Sources */,
 				E17538952554A4BC00B57258 /* ThermostatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,12 +289,12 @@
 /* Begin PBXTargetDependency section */
 		E17538A42554A4BF00B57258 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E17538902554A4BC00B57258 /* Thermostat */;
+			target = E17538902554A4BC00B57258 /* ThermostatApp */;
 			targetProxy = E17538A32554A4BF00B57258 /* PBXContainerItemProxy */;
 		};
 		E17538AF2554A4BF00B57258 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E17538902554A4BC00B57258 /* Thermostat */;
+			target = E17538902554A4BC00B57258 /* ThermostatApp */;
 			targetProxy = E17538AE2554A4BF00B57258 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -474,7 +478,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thermostat.app/Thermostat";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThermostatApp.app/ThermostatApp";
 			};
 			name = Debug;
 		};
@@ -496,7 +500,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thermostat.app/Thermostat";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThermostatApp.app/ThermostatApp";
 			};
 			name = Release;
 		};
@@ -543,7 +547,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E175388C2554A4BC00B57258 /* Build configuration list for PBXProject "Thermostat" */ = {
+		E175388C2554A4BC00B57258 /* Build configuration list for PBXProject "ThermostatApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E17538B42554A4BF00B57258 /* Debug */,
@@ -552,7 +556,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E17538B62554A4BF00B57258 /* Build configuration list for PBXNativeTarget "Thermostat" */ = {
+		E17538B62554A4BF00B57258 /* Build configuration list for PBXNativeTarget "ThermostatApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E17538B72554A4BF00B57258 /* Debug */,
@@ -561,7 +565,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E17538B92554A4BF00B57258 /* Build configuration list for PBXNativeTarget "ThermostatTests" */ = {
+		E17538B92554A4BF00B57258 /* Build configuration list for PBXNativeTarget "ThermostatAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E17538BA2554A4BF00B57258 /* Debug */,
@@ -570,7 +574,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E17538BC2554A4BF00B57258 /* Build configuration list for PBXNativeTarget "ThermostatUITests" */ = {
+		E17538BC2554A4BF00B57258 /* Build configuration list for PBXNativeTarget "ThermostatAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E17538BD2554A4BF00B57258 /* Debug */,
