@@ -27,7 +27,7 @@ class ThermostatTests: XCTestCase {
         XCTAssertEqual(result, Thermostat.Constants.intialTemprature)
     }
     
-    func testLowerTemperatureLowersTemperatureByOne(){
+    func testLowerTemperatureLowersTemperatureByOne() {
         
         let initalTemp = thermostat.temperature
         thermostat.lowerTemperature()
@@ -37,7 +37,7 @@ class ThermostatTests: XCTestCase {
         XCTAssertEqual(differnce, Thermostat.Constants.step)
     }
     
-    func testMinimumTemeratureIsEqual10() {
+    func testMinimumTemeratureNeverFallsBellowMinimumTemperature() {
         for _ in 0...105 {
             thermostat.lowerTemperature()
         }
@@ -47,5 +47,46 @@ class ThermostatTests: XCTestCase {
         XCTAssertEqual(result, Thermostat.Constants.minimumTemparture)
     }
     
+    func testIncreaseTemperatureByOne() {
+        let initialTemp = thermostat.temperature
+        
+        thermostat.increaseTemperature()
+        
+        let resultTemp = thermostat.temperature
+        
+        let difference = resultTemp - initialTemp
+        
+        XCTAssertEqual(difference, Thermostat.Constants.step)
+    }
     
+    func testMaxTempNeverExeded() {
+        thermostat.isPowerSavingOn = false
+        
+        for _ in 0...105 {
+            thermostat.increaseTemperature()
+        }
+        
+        let result = thermostat.temperature
+        
+        XCTAssertEqual(result, Thermostat.Constants.maximumTemperature)
+        
+    }
+    
+    func testPowerSavingModeOnbyDefault() {
+        let result = thermostat.isPowerSavingOn
+        
+        XCTAssertTrue(result)
+    }
+    //test_whenPowerSavingOn_TempratureSatysBelowPowerSavingMax
+    func testTempWithPowerSavingModeOnNeverExedes() {
+        //GIVEN power mode is on
+        //WHEN I increase the temprature many times
+        //THEN the tempearture never goes above power saving limit
+        for _ in 0...105 {
+            thermostat.increaseTemperature()
+        }
+        let result = thermostat.temperature
+        
+        XCTAssertEqual(result, Thermostat.Constants.maximumTempPWSOn)
+    }
 }
