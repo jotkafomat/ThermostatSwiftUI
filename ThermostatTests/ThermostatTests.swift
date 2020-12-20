@@ -89,4 +89,55 @@ class ThermostatTests: XCTestCase {
         
         XCTAssertEqual(result, Thermostat.Constants.maximumTempPWSOn)
     }
+    
+    func testResetTemperatureSetTemperatureBackToInitial() {
+        
+        for _ in 0...105 {
+            thermostat.increaseTemperature()
+        }
+        thermostat.resetTemperature()
+        let result = thermostat.temperature
+        
+        XCTAssertEqual(result, Thermostat.Constants.intialTemprature)
+    }
+    
+    func testEnergyUsageLow() {
+        
+        for _ in 0...3 {
+            thermostat.lowerTemperature()
+        }
+        
+        let result = thermostat.energyUsage
+        XCTAssertEqual(result, .low)
+    }
+    
+    func testEnergyUsageMedium() {
+        
+        let result = thermostat.energyUsage
+        XCTAssertEqual(result, .medium)
+    }
+    
+    func testEnergyUsageHigh() {
+        thermostat.isPowerSavingOn = false
+        for _ in 0...8 {
+            thermostat.increaseTemperature()
+        }
+        
+        let result = thermostat.energyUsage
+
+        XCTAssertEqual(result, .high)
+    }
+    
+    func testShowKa() {
+        thermostat.isPowerSavingOn = false
+        for _ in 0...8 {
+            thermostat.increaseTemperature()
+        }
+        thermostat.isPowerSavingOn = true
+        let result = thermostat.temperature
+        
+        XCTAssertEqual(result, Thermostat.Constants.maximumTempPWSOn)
+    }
+    
+    
 }
