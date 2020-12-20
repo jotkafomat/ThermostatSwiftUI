@@ -7,36 +7,112 @@
 
 import XCTest
 
+@testable import ThermostatApp
+
 class ThermostatUITests: XCTestCase {
+    
+    var app: XCUIApplication!
+    var temperatureDisplay: String {
+        app.staticTexts["temperature display"].label
+    }
+    
+    var plusButton: XCUIElement {
+        app.buttons["plus button"]
+    }
+    
+    var minusButton: XCUIElement {
+        app.buttons["minus button"]
+    }
+    
+    var resetButton: XCUIElement {
+        app.buttons["reset button"]
+    }
+    
+    var powerSavingButton: XCUIElement {
+        app.buttons["power saving button"]
+    }
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
+        app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        continueAfterFailure = false
     }
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
+    func testDefaultTemperature() throws {
+        //WHEN I first open the app
+        //THEN the temparture is 20
+        let temp = Constants.intialTemprature
+        
+        XCTAssertEqual(temperatureDisplay, String(format: "%.1f ℃", temp))
+    }
+    
+    func testIncreaseTemperature() {
+        //GIVEN the temparture is 20
+        //WHEN I tap on plus button
+        plusButton.tap()
+        //THEN the temparture increses by 1
+        let temp = Constants.intialTemprature + Constants.step
+        
+        XCTAssertEqual(temperatureDisplay, String(format: "%.1f ℃", temp))
+    }
+    
+    func testLowerTemperature() {
+        //GIVEN the temparture is 20
+        //WHEN I tap on minus button
+        minusButton.tap()
+        //THEN the temparture decreases by 1
+        let temp = Constants.intialTemprature - Constants.step
+        
+        XCTAssertEqual(temperatureDisplay, String(format: "%.1f ℃", temp))
+    }
+    
+    func testResetTemperature() {
+        //GIVEN the temparture is 20
+        //WHEN I tap on minus button twice
+        //AND I tap on the reset button
+        minusButton.tap()
+        minusButton.tap()
+        resetButton.tap()
+        //THEN the temparture is still 20
+        let temp = Constants.intialTemprature
+        XCTAssertEqual(temperatureDisplay, String(format: "%.1f ℃", temp))
+    }
+    
+    func testPowerSavingOn() {
+        //GIVEN the temparture is 20
+        //WHEN I repeatedly tap on plus button
+        for _ in 0...10 {
+            plusButton.tap()
         }
+        //THEN The temprature only reaches 25
+        let temp = Constants.maximumTempPWSOn
+        XCTAssertEqual(temperatureDisplay, String(format: "%.1f ℃", temp))
     }
+    
+    func testPowerSavingOff() {
+        //GIVEN the temparture is 20
+        //WHEN I turn power seaver off
+        powerSavingButton.tap()
+        //AND I repeatedly tap on plus button
+        for _ in 0...20 {
+            plusButton.tap()
+        }
+        //THEN The temprature only reaches 32
+        let temp = Constants.maximumTemperature
+        
+        XCTAssertEqual(temperatureDisplay, String(format: "%.1f ℃", temp))
+    }
+    
+    func testMinimumTemperature() {
+        //GIVEN the temparture is 20
+        //WHEN I repeatedly tap on plus button
+        for _ in 0...15 {
+            app.buttons["minus.circle"].tap()
+        }
+        //THEN The temprature only falls to 10
+        let temp = Constants.minimumTemparture
+        XCTAssertEqual(temperatureDisplay, String(format: "%.1f ℃", temp))
+    }
+
 }

@@ -24,7 +24,7 @@ class ThermostatTests: XCTestCase {
     func testIntialValueEqual20() {
         let result = thermostat.temperature
         
-        XCTAssertEqual(result, Thermostat.Constants.intialTemprature)
+        XCTAssertEqual(result, Constants.intialTemprature)
     }
     
     func testLowerTemperatureLowersTemperatureByOne() {
@@ -34,7 +34,7 @@ class ThermostatTests: XCTestCase {
         
         let resultTemp = thermostat.temperature
         let differnce = initalTemp - resultTemp
-        XCTAssertEqual(differnce, Thermostat.Constants.step)
+        XCTAssertEqual(differnce, Constants.step)
     }
     
     func testMinimumTemeratureNeverFallsBellowMinimumTemperature() {
@@ -44,7 +44,7 @@ class ThermostatTests: XCTestCase {
 
         let result = thermostat.temperature
         
-        XCTAssertEqual(result, Thermostat.Constants.minimumTemparture)
+        XCTAssertEqual(result, Constants.minimumTemparture)
     }
     
     func testIncreaseTemperatureByOne() {
@@ -56,7 +56,7 @@ class ThermostatTests: XCTestCase {
         
         let difference = resultTemp - initialTemp
         
-        XCTAssertEqual(difference, Thermostat.Constants.step)
+        XCTAssertEqual(difference, Constants.step)
     }
     
     func testMaxTempNeverExeded() {
@@ -68,7 +68,7 @@ class ThermostatTests: XCTestCase {
         
         let result = thermostat.temperature
         
-        XCTAssertEqual(result, Thermostat.Constants.maximumTemperature)
+        XCTAssertEqual(result, Constants.maximumTemperature)
         
     }
     
@@ -87,7 +87,7 @@ class ThermostatTests: XCTestCase {
         }
         let result = thermostat.temperature
         
-        XCTAssertEqual(result, Thermostat.Constants.maximumTempPWSOn)
+        XCTAssertEqual(result, Constants.maximumTempPWSOn)
     }
     
     func testResetTemperatureSetTemperatureBackToInitial() {
@@ -98,7 +98,7 @@ class ThermostatTests: XCTestCase {
         thermostat.resetTemperature()
         let result = thermostat.temperature
         
-        XCTAssertEqual(result, Thermostat.Constants.intialTemprature)
+        XCTAssertEqual(result, Constants.intialTemprature)
     }
     
     func testEnergyUsageLow() {
@@ -136,7 +136,7 @@ class ThermostatTests: XCTestCase {
         thermostat.isPowerSavingOn = true
         let result = thermostat.temperature
         
-        XCTAssertEqual(result, Thermostat.Constants.maximumTempPWSOn)
+        XCTAssertEqual(result, Constants.maximumTempPWSOn)
     }
     
     
