@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct ThermostatApp: App {
+    
+    var thermostat = Thermostat()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ThermostatView(thermostat: thermostat)
         }
     }
 }
