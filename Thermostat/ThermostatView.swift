@@ -12,10 +12,31 @@ struct ThermostatView: View {
     @ObservedObject var thermostat: Thermostat
     
     var body: some View {
-        Text(String(format: "%.1f ℃", thermostat.temperature))
-            .font(.largeTitle)
-            .bold()
-            .padding()
+        VStack {
+            Text(String(format: "%.1f ℃", thermostat.temperature))
+                .font(.largeTitle)
+                .bold()
+                .padding()
+            HStack {
+                Button(action: thermostat.lowerTemperature) {
+                    Image(systemName: "minus.circle")
+                        .imageScale(.large)
+                }
+                Button(action: thermostat.increaseTemperature) {
+                    Image(systemName: "plus.circle")
+                        .imageScale(.large)
+                }
+                Button(action: thermostat.resetTemperature) {
+                    Image(systemName: "arrow.counterclockwise.circle")
+                        .imageScale(.large)
+                }
+                Button(action: { thermostat.isPowerSavingOn.toggle() } ) {
+                    Image(systemName: "leaf.arrow.triangle.circlepath")
+                        .imageScale(.large)
+                        .foregroundColor(thermostat.isPowerSavingOn ? .green : .secondary )
+                }
+            }
+        }
     }
 }
 

@@ -11,7 +11,7 @@ class Thermostat: ObservableObject {
     
     @Published private (set) var temperature: Double
     
-    var isPowerSavingOn: Bool {
+    @Published var isPowerSavingOn: Bool {
         didSet {
             if isPowerSavingOn {
                 temperature = min(temperature, Constants.maximumTempPWSOn)
