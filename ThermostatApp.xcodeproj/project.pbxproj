@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E16303D6258FCC5F00005596 /* EnergyUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16303D5258FCC5F00005596 /* EnergyUsage.swift */; };
+		E16303E8258FDC4800005596 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16303E7258FDC4800005596 /* Constants.swift */; };
+		E16303EC258FDC6C00005596 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16303E7258FDC4800005596 /* Constants.swift */; };
 		E17538952554A4BC00B57258 /* ThermostatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17538942554A4BC00B57258 /* ThermostatApp.swift */; };
 		E17538972554A4BC00B57258 /* ThermostatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17538962554A4BC00B57258 /* ThermostatView.swift */; };
 		E17538992554A4BE00B57258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17538982554A4BE00B57258 /* Assets.xcassets */; };
@@ -36,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		E16303D5258FCC5F00005596 /* EnergyUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyUsage.swift; sourceTree = "<group>"; };
+		E16303E7258FDC4800005596 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E17538912554A4BC00B57258 /* ThermostatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThermostatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17538942554A4BC00B57258 /* ThermostatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermostatApp.swift; sourceTree = "<group>"; };
 		E17538962554A4BC00B57258 /* ThermostatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermostatView.swift; sourceTree = "<group>"; };
@@ -106,6 +109,7 @@
 				E175389A2554A4BE00B57258 /* Preview Content */,
 				E17538C22554A69300B57258 /* Thermostat.swift */,
 				E16303D5258FCC5F00005596 /* EnergyUsage.swift */,
+				E16303E7258FDC4800005596 /* Constants.swift */,
 			);
 			path = Thermostat;
 			sourceTree = "<group>";
@@ -265,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E16303E8258FDC4800005596 /* Constants.swift in Sources */,
 				E17538972554A4BC00B57258 /* ThermostatView.swift in Sources */,
 				E17538C32554A69300B57258 /* Thermostat.swift in Sources */,
 				E17538952554A4BC00B57258 /* ThermostatApp.swift in Sources */,
@@ -285,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E17538B22554A4BF00B57258 /* ThermostatUITests.swift in Sources */,
+				E16303EC258FDC6C00005596 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

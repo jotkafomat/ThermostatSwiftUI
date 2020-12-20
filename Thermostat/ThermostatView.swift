@@ -19,24 +19,30 @@ struct ThermostatView: View {
                 .bold()
                 .foregroundColor(thermostat.energyUsage.color)
                 .padding()
+                .accessibility(identifier: "temperature display")
+            
             HStack {
+                
                 Button(action: thermostat.lowerTemperature) {
                     Image(systemName: "minus.circle")
                         .imageScale(.large)
-                }
+                }.accessibility(identifier: "minus button")
+                
                 Button(action: thermostat.increaseTemperature) {
                     Image(systemName: "plus.circle")
                         .imageScale(.large)
-                }
+                }.accessibility(identifier: "plus button")
+                
                 Button(action: thermostat.resetTemperature) {
                     Image(systemName: "arrow.counterclockwise.circle")
                         .imageScale(.large)
-                }
+                }.accessibility(identifier: "reset button")
+                
                 Button(action: { thermostat.isPowerSavingOn.toggle() } ) {
                     Image(systemName: "leaf.arrow.triangle.circlepath")
                         .imageScale(.large)
                         .foregroundColor(thermostat.isPowerSavingOn ? .green : .secondary )
-                }
+                }.accessibility(identifier: "power saving button")
             }
         }
     }
