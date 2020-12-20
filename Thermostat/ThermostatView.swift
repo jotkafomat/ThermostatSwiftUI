@@ -14,8 +14,10 @@ struct ThermostatView: View {
     var body: some View {
         VStack {
             Text(String(format: "%.1f ℃", thermostat.temperature))
-                .font(.largeTitle)
+                .font(Font.system(.largeTitle,
+                                  design: .monospaced))
                 .bold()
+                .foregroundColor(thermostat.energyUsage.color)
                 .padding()
             HStack {
                 Button(action: thermostat.lowerTemperature) {
