@@ -59,9 +59,3 @@ class Thermostat: ObservableObject {
     }
 
 }
-
-enum EnergyUsage {
-    case low
-    case medium
-    case high
-}
