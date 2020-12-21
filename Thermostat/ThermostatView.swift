@@ -15,8 +15,26 @@ struct ThermostatView: View {
         VStack {
             TemperatureDisplay(thermostat: thermostat)
             
-            HStack {
-                ControllsView(thermostat: thermostat)
+            ControllsView(thermostat: thermostat)
+            WeatherView(temperature: thermostat.outsideTemperature)
+            
+            
+        }
+    }
+}
+
+struct WeatherView: View {
+    
+    var temperature: Double?
+    
+    var body: some View {
+        HStack {
+            Text("London")
+            Image(systemName: "thermometer.sun")
+            if let temperature = temperature {
+                Text(String(format: "%.1f ℃", temperature))
+            } else {
+                ProgressView()
             }
         }
     }
@@ -24,7 +42,7 @@ struct ThermostatView: View {
 
 struct ThermostatView_Previews: PreviewProvider {
     
-    static var thermostat = Thermostat()
+    static var thermostat = Thermostat(weatherProvider: OpenWeatherAPI())
     
     static var previews: some View {
         ThermostatView(thermostat: thermostat)

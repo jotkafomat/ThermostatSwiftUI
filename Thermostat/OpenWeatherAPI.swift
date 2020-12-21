@@ -18,14 +18,15 @@ class OpenWeatherAPI: WeatherProvider {
     private let baseUrl: URL
     private static let key = "e7a4418a4fdf0beb9a4ecd169f0ff00a"
     
-    public init(session: URLSession = URLSession.shared, baseUrl: URL = URL(string: "api.openweathermap.org/data/2.5/weather")!) {
+    public init(session: URLSession = URLSession.shared, baseUrl: URL = URL(string: "https://api.openweathermap.org/data/2.5/weather")!) {
         self.session = session
         self.baseUrl = baseUrl
     }
     
     func getWeather(city: String) -> AnyPublisher<WeatherParameters?, Never> {
         let querryItems = [URLQueryItem(name: "appid", value: OpenWeatherAPI.key),
-                           URLQueryItem(name: "q", value: city)]
+                           URLQueryItem(name: "q", value: city),
+                           URLQueryItem(name: "units", value: "metric")]
         let url = baseUrl.appending(querryItems)
         var request = URLRequest(url: url)
         request.httpMethod = "GET"

@@ -5,6 +5,7 @@
 //  Created by Krzysztof Jankowski on 05/11/2020.
 //
 
+import Combine
 import Foundation
 import XCTest
 @testable import ThermostatApp
@@ -12,13 +13,16 @@ import XCTest
 class ThermostatTests: XCTestCase {
     
     var thermostat: Thermostat!
+    var cancellable: AnyCancellable?
 
     override func setUpWithError() throws {
-        thermostat = Thermostat()
+        
+        thermostat = Thermostat(weatherProvider: MockWeatherProvider.succesful)
     }
     
     override func tearDownWithError() throws {
         thermostat = nil
+        cancellable?.cancel()
     }
 
     func testIntialValueEqual20() {
@@ -139,5 +143,39 @@ class ThermostatTests: XCTestCase {
         XCTAssertEqual(result, Constants.maximumTempPWSOn)
     }
     
+    func testWeatherProviderSucceess() {
+        
+        let thermostat = Thermostat(weatherProvider: MockWeatherProvider.succesful)
+        let expectation = XCTestExpectation(description: "expect outside temp not be nil")
+        
+        cancellable = thermostat
+            .$outsideTemperature
+            .dropFirst()
+            .sink { temp in
+            
+            XCTAssertNotNil(temp)
+            XCTAssertEqual(temp, 13.23)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 1.0)
+    }
     
+    func testWeatherProviderFailure() {
+        
+        let thermostat = Thermostat(weatherProvider: MockWeatherProvider.errorProne)
+        let expectation = XCTestExpectation(description: "expect outside temp to be nil")
+        
+        cancellable = thermostat
+            .$outsideTemperature
+            .dropFirst()
+            .sink { temp in
+            
+            XCTAssertNil(temp)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 1.0)
+    }
 }
+

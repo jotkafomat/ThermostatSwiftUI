@@ -13,5 +13,5 @@ struct WeatherResponse: Decodable {
 
 
 struct WeatherParameters: Decodable {
-    let temp: Decimal
+    let temp: Double
 }

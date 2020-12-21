@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct ThermostatApp: App {
     
-    var thermostat = Thermostat()
+    var thermostat = Thermostat(weatherProvider: OpenWeatherAPI())
     
     var body: some Scene {
         WindowGroup {
