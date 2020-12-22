@@ -18,7 +18,8 @@ struct TemperatureDisplay: View {
             .bold()
             .foregroundColor(thermostat.energyUsage.color)
             .padding()
+            .accessibility(label: Text(String(format: "%.1f Centigrade", thermostat.temperature)))
             .accessibility(identifier: "temperature display")
-            .accessibility(label: Text("\(Int(thermostat.temperature)) Centigrade"))
-    }
+
+        }
 }

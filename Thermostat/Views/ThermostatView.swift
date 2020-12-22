@@ -23,23 +23,6 @@ struct ThermostatView: View {
     }
 }
 
-struct WeatherView: View {
-    
-    var temperature: Double?
-    
-    var body: some View {
-        HStack {
-            Text("London")
-            Image(systemName: "thermometer.sun")
-            if let temperature = temperature {
-                Text(String(format: "%.1f ℃", temperature))
-            } else {
-                ProgressView()
-            }
-        }
-    }
-}
-
 struct ThermostatView_Previews: PreviewProvider {
     
     static var thermostat = Thermostat(weatherProvider: OpenWeatherAPI())
