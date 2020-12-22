@@ -19,6 +19,6 @@ struct TemperatureDisplay: View {
             .foregroundColor(thermostat.energyUsage.color)
             .padding()
             .accessibility(identifier: "temperature display")
-            .accessibility(label: Text("\(Int(thermostat.temperature)) degree Celcius"))
+            .accessibility(label: Text("\(Int(thermostat.temperature)) Centigrade"))
     }
 }

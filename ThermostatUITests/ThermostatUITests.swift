@@ -44,7 +44,7 @@ class ThermostatUITests: XCTestCase {
         //THEN the temparture is 20
         let temp = Constants.intialTemprature
         
-        XCTAssertEqual(temperatureDisplay, String("\(Int(temp)) degree Celcius"))
+        XCTAssertEqual(temperatureDisplay, String("\(Int(temp)) Centigrade"))
     }
     
     func testIncreaseTemperature() {
@@ -54,7 +54,7 @@ class ThermostatUITests: XCTestCase {
         //THEN the temparture increses by 1
         let temp = Constants.intialTemprature + Constants.step
         
-        XCTAssertEqual(temperatureDisplay, String("\(Int(temp)) degree Celcius"))
+        XCTAssertEqual(temperatureDisplay, String("\(Int(temp)) Centigrade"))
     }
     
     func testLowerTemperature() {
@@ -64,7 +64,7 @@ class ThermostatUITests: XCTestCase {
         //THEN the temparture decreases by 1
         let temp = Constants.intialTemprature - Constants.step
         
-        XCTAssertEqual(temperatureDisplay, String("\(Int(temp)) degree Celcius"))
+        XCTAssertEqual(temperatureDisplay, String("\(Int(temp)) Centigrade"))
     }
     
     func testResetTemperature() {
@@ -76,7 +76,7 @@ class ThermostatUITests: XCTestCase {
         resetButton.tap()
         //THEN the temparture is still 20
         let temp = Constants.intialTemprature
-        XCTAssertEqual(temperatureDisplay, String("\(Int(temp)) degree Celcius"))
+        XCTAssertEqual(temperatureDisplay, String("\(Int(temp)) Centigrade"))
     }
     
     func testPowerSavingOn() {
@@ -87,7 +87,7 @@ class ThermostatUITests: XCTestCase {
         }
         //THEN The temprature only reaches 25
         let temp = Constants.maximumTempPWSOn
-        XCTAssertEqual(temperatureDisplay, String("\(Int(temp)) degree Celcius"))
+        XCTAssertEqual(temperatureDisplay, String("\(Int(temp)) Centigrade"))
     }
     
     func testPowerSavingOff() {
@@ -101,7 +101,7 @@ class ThermostatUITests: XCTestCase {
         //THEN The temprature only reaches 32
         let temp = Constants.maximumTemperature
         
-        XCTAssertEqual(temperatureDisplay, String("\(Int(temp)) degree Celcius"))
+        XCTAssertEqual(temperatureDisplay, String("\(Int(temp)) Centigrade"))
     }
     
     func testMinimumTemperature() {
@@ -112,7 +112,7 @@ class ThermostatUITests: XCTestCase {
         }
         //THEN The temprature only falls to 10
         let temp = Constants.minimumTemparture
-        XCTAssertEqual(temperatureDisplay, String("\(Int(temp)) degree Celcius"))
+        XCTAssertEqual(temperatureDisplay, String("\(Int(temp)) Centigrade"))
     }
 
 }
