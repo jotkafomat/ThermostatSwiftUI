@@ -16,7 +16,9 @@ struct ThermostatView: View {
             TemperatureDisplay(thermostat: thermostat)
             
             ControllsView(thermostat: thermostat)
-            WeatherView(temperature: thermostat.outsideTemperature)
+            WeatherView(action: thermostat.getTemp,
+                        temperature: thermostat.outsideTemperature,
+                        city: $thermostat.city)
             
             
         }

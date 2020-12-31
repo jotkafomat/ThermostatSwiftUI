@@ -157,7 +157,7 @@ class ThermostatTests: XCTestCase {
             XCTAssertEqual(temp, 13.23)
             expectation.fulfill()
         }
-        
+        thermostat.getTemp()
         wait(for: [expectation], timeout: 1.0)
     }
     
@@ -174,7 +174,7 @@ class ThermostatTests: XCTestCase {
             XCTAssertNil(temp)
             expectation.fulfill()
         }
-        
+        thermostat.getTemp()
         wait(for: [expectation], timeout: 1.0)
     }
 }

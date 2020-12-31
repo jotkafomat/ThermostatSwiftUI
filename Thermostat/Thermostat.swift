@@ -21,24 +21,26 @@ class Thermostat: ObservableObject {
     }
     private let weatherProvider: WeatherProvider
     var cancellable: AnyCancellable?
-
+    var city: String = ""
     
     var energyUsage: EnergyUsage {
         if temperature < Constants.lowEnergyUsageThreshold {
             return .low
         } else if temperature > Constants.highEnergyUsageThreshold {
             return .high
-        } else {
-            return .medium
         }
+        return .medium
     }
     
     init(weatherProvider: WeatherProvider) {
         temperature = Constants.intialTemprature
         isPowerSavingOn = true
         self.weatherProvider = weatherProvider
+    }
+    
+    func getTemp() {
         cancellable = weatherProvider
-            .getWeather(city: "london")
+            .getWeather(city: city)
             .receive(on: RunLoop.main)
             .map { $0?.temp }
             .assign(to: \.outsideTemperature, on: self)
