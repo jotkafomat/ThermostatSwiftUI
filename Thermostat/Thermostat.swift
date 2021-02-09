@@ -20,7 +20,6 @@ class Thermostat: ObservableObject {
         }
     }
     private let weatherProvider: WeatherProvider
-    var cancellable: AnyCancellable?
     var city: String = ""
     
     var energyUsage: EnergyUsage {
@@ -39,15 +38,11 @@ class Thermostat: ObservableObject {
     }
     
     func getTemp() {
-        cancellable = weatherProvider
+        weatherProvider
             .getWeather(city: city)
             .receive(on: RunLoop.main)
             .map { $0?.temp }
-            .assign(to: \.outsideTemperature, on: self)
-    }
-    
-    deinit {
-        cancellable?.cancel()
+            .assign(to: &$outsideTemperature)
     }
     
     func lowerTemperature() {
