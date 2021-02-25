@@ -10,13 +10,13 @@
 		E116FC0D2591005800A89C7B /* WeatherResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116FC0C2591005800A89C7B /* WeatherResponseTests.swift */; };
 		E116FC122591166400A89C7B /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116FC112591166400A89C7B /* Data+Extension.swift */; };
 		E116FC1F259118BD00A89C7B /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116FC1E259118BD00A89C7B /* WeatherResponse.swift */; };
-		E116FC26259119AE00A89C7B /* weatherapi.json in Resources */ = {isa = PBXBuildFile; fileRef = E116FC072590FF3700A89C7B /* weatherapi.json */; };
 		E116FC2B25911CE400A89C7B /* OpenWeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116FC2A25911CE400A89C7B /* OpenWeatherAPI.swift */; };
 		E116FC302591216D00A89C7B /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116FC2F2591216D00A89C7B /* URL+Extension.swift */; };
 		E116FC3D259124DE00A89C7B /* OpenWeatherAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116FC3C259124DE00A89C7B /* OpenWeatherAPITest.swift */; };
 		E116FC4A2591257B00A89C7B /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116FC492591257B00A89C7B /* MockURLProtocol.swift */; };
 		E116FC522591441400A89C7B /* MockWeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116FC512591441400A89C7B /* MockWeatherProvider.swift */; };
 		E116FC6525928E8400A89C7B /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116FC6425928E8400A89C7B /* WeatherView.swift */; };
+		E128DA3725E69AA1008957F3 /* weatherapi.json in Resources */ = {isa = PBXBuildFile; fileRef = E128DA3625E69AA1008957F3 /* weatherapi.json */; };
 		E16303D6258FCC5F00005596 /* EnergyUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16303D5258FCC5F00005596 /* EnergyUsage.swift */; };
 		E16303E8258FDC4800005596 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16303E7258FDC4800005596 /* Constants.swift */; };
 		E16303EC258FDC6C00005596 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16303E7258FDC4800005596 /* Constants.swift */; };
@@ -49,7 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E116FC072590FF3700A89C7B /* weatherapi.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weatherapi.json; sourceTree = "<group>"; };
 		E116FC0C2591005800A89C7B /* WeatherResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponseTests.swift; sourceTree = "<group>"; };
 		E116FC112591166400A89C7B /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		E116FC1E259118BD00A89C7B /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		E116FC492591257B00A89C7B /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		E116FC512591441400A89C7B /* MockWeatherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWeatherProvider.swift; sourceTree = "<group>"; };
 		E116FC6425928E8400A89C7B /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		E128DA3625E69AA1008957F3 /* weatherapi.json */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.json; path = weatherapi.json; sourceTree = "<group>"; };
 		E16303D5258FCC5F00005596 /* EnergyUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyUsage.swift; sourceTree = "<group>"; };
 		E16303E7258FDC4800005596 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E16303F0258FF1A900005596 /* TemperatureDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureDisplay.swift; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 			children = (
 				E17538A62554A4BF00B57258 /* ThermostatTests.swift */,
 				E17538A82554A4BF00B57258 /* Info.plist */,
-				E116FC072590FF3700A89C7B /* weatherapi.json */,
+				E128DA3625E69AA1008957F3 /* weatherapi.json */,
 				E116FC0C2591005800A89C7B /* WeatherResponseTests.swift */,
 				E116FC112591166400A89C7B /* Data+Extension.swift */,
 				E116FC3C259124DE00A89C7B /* OpenWeatherAPITest.swift */,
@@ -296,7 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E116FC26259119AE00A89C7B /* weatherapi.json in Resources */,
+				E128DA3725E69AA1008957F3 /* weatherapi.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

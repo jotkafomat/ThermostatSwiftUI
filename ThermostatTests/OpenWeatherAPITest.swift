@@ -36,12 +36,14 @@ class OpenWeatherAPITest: XCTestCase {
             let data = try! Data(from: "weatherapi")
             return (response, data)
         }
-        
+        let receiveParameters = expectation(description: "Receive parameters")
         cancellable = api.getWeather(city: "gotham").sink { parameter in
             
             XCTAssertNotNil(parameter)
             XCTAssertEqual(parameter?.temp, 13.23)
+            receiveParameters.fulfill()
         }
+        waitForExpectations(timeout: 1)
         
     }
     
@@ -50,11 +52,13 @@ class OpenWeatherAPITest: XCTestCase {
             let response = HTTPURLResponse(url: self.baseUrl!, statusCode: 404, httpVersion: nil, headerFields: nil)!
             return (response, nil)
         }
-        
+        let receiveNoParameter = expectation(description: "receive no parameters")
         cancellable = api.getWeather(city: "gotham").sink { parameter in
             
             XCTAssertNil(parameter)
+            receiveNoParameter.fulfill()
         }
+        waitForExpectations(timeout: 1)
         
     }
 
