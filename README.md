@@ -21,10 +21,10 @@ XCTest (unit and UI tests)
 Accessibility - Voice over
 
 ### Test Coverage
-[link](/Users/kamacbook/SwiftProject/Moje/Thermostat/Thermostat/ThermostatScreenShot.png)
+[link](Thermostat/ThermostatScreenShot.png)
 
 ### Screenshot
-[link](/Users/kamacbook/SwiftProject/Moje/Thermostat/Thermostat/ThermostatScreenShot.png)
+[link](Thermostat/ThermostatScreenShot.png)
 
 
 
