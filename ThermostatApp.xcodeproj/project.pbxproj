@@ -17,6 +17,8 @@
 		E116FC522591441400A89C7B /* MockWeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116FC512591441400A89C7B /* MockWeatherProvider.swift */; };
 		E116FC6525928E8400A89C7B /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116FC6425928E8400A89C7B /* WeatherView.swift */; };
 		E128DA3725E69AA1008957F3 /* weatherapi.json in Resources */ = {isa = PBXBuildFile; fileRef = E128DA3625E69AA1008957F3 /* weatherapi.json */; };
+		E144280026249AEF00269E5D /* ThermostatScreenShot.png in Resources */ = {isa = PBXBuildFile; fileRef = E14427FF26249AEF00269E5D /* ThermostatScreenShot.png */; };
+		E144280526249B0000269E5D /* ThermostatTestCoverage.png in Resources */ = {isa = PBXBuildFile; fileRef = E144280426249B0000269E5D /* ThermostatTestCoverage.png */; };
 		E16303D6258FCC5F00005596 /* EnergyUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16303D5258FCC5F00005596 /* EnergyUsage.swift */; };
 		E16303E8258FDC4800005596 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16303E7258FDC4800005596 /* Constants.swift */; };
 		E16303EC258FDC6C00005596 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16303E7258FDC4800005596 /* Constants.swift */; };
@@ -59,6 +61,9 @@
 		E116FC512591441400A89C7B /* MockWeatherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWeatherProvider.swift; sourceTree = "<group>"; };
 		E116FC6425928E8400A89C7B /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		E128DA3625E69AA1008957F3 /* weatherapi.json */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.json; path = weatherapi.json; sourceTree = "<group>"; };
+		E14427FB262495A100269E5D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E14427FF26249AEF00269E5D /* ThermostatScreenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThermostatScreenShot.png; sourceTree = "<group>"; };
+		E144280426249B0000269E5D /* ThermostatTestCoverage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThermostatTestCoverage.png; sourceTree = "<group>"; };
 		E16303D5258FCC5F00005596 /* EnergyUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyUsage.swift; sourceTree = "<group>"; };
 		E16303E7258FDC4800005596 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E16303F0258FF1A900005596 /* TemperatureDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureDisplay.swift; sourceTree = "<group>"; };
@@ -117,6 +122,7 @@
 		E17538882554A4BC00B57258 = {
 			isa = PBXGroup;
 			children = (
+				E14427FB262495A100269E5D /* README.md */,
 				E17538932554A4BC00B57258 /* Thermostat */,
 				E17538A52554A4BF00B57258 /* ThermostatTests */,
 				E17538B02554A4BF00B57258 /* ThermostatUITests */,
@@ -138,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				E17538942554A4BC00B57258 /* ThermostatApp.swift */,
+				E14427FF26249AEF00269E5D /* ThermostatScreenShot.png */,
+				E144280426249B0000269E5D /* ThermostatTestCoverage.png */,
 				E116FC6025928E4300A89C7B /* Views */,
 				E17538982554A4BE00B57258 /* Assets.xcassets */,
 				E175389D2554A4BE00B57258 /* Info.plist */,
@@ -287,7 +295,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E144280526249B0000269E5D /* ThermostatTestCoverage.png in Resources */,
 				E175389C2554A4BE00B57258 /* Preview Assets.xcassets in Resources */,
+				E144280026249AEF00269E5D /* ThermostatScreenShot.png in Resources */,
 				E17538992554A4BE00B57258 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
