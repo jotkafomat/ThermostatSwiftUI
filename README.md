@@ -1,5 +1,6 @@
 #  Thermostat
 
+A simple thermostat programe that allows a user to turn the temperature up and down.
 
 ### Specification
 
