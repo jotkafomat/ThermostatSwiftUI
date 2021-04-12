@@ -21,7 +21,7 @@ XCTest (unit and UI tests)
 Accessibility - Voice over
 
 ### Test Coverage
-![link](Thermostat/ScreenCoverage.png)
+![link](Thermostat/ThermostatTestCoverage.png)
 
 ### Screenshot
 ![link](Thermostat/ThermostatScreenShot.png)
